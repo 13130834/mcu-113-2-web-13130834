@@ -5,6 +5,7 @@ body {
 
 h3 {
   text-align: center;
+  color: rgba(0, 0, 0, 0.8);
 }
 
 section.body {
@@ -32,6 +33,10 @@ table {
   margin: 10px 0px;
 }
 
+table th {
+  background-color: #777;
+  color: white;
+}
 th,
 td {
   height: 30px;
