@@ -1,76 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>電子商網管理後台</title>
-    <link rel="stylesheet" href="style.css" />
+<head>
+  <meta charset="utf-8">
+  <title>ShoppingCart</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
-  </head>
-  <body>
-    <header>
-      <h3 style="text-align: center">電子商網管理後台</h3>
-    </header>
-    <section class="body">
-    <nav>
-      <ul>
-        <li>
-          <a href="./form.html">產品新增</a>
-        </li>
-        <li>
-        <a>登入</a>
-      </li>
-      </ul>
-    </nav>
-    <form>
-      <input id="name" type="text" placeholder="產品名稱" />
-      <button type="button" onclick="onSearch()">查詢</button>
-      <span id="result"></span>
-    </form>
-
-    <table border="1">
-      <tr>
-        <th>No.</th>
-        <th>名稱</th>
-        <th>廠商</th>
-        <th>單價</th>
-      </tr>
-      <tr>
-        <td class="id">1</td>
-        <td>圖像 Angular 開發入門 第二版</td>
-        <td class="company">博碩文化</td>
-        <td class="price">500</td>
-      </tr>
-      <tr>
-        <td class="id">2</td>
-        <td>金魚都能懂的 CSS 必學屬性</td>
-        <td class="company">博碩文化</td>
-        <td class="price">500</td>
-      </tr>
-    </table>
-    <hr />
-    <section class="card-container">
-    <section class="card">
-      <img src="./assets/images/angular.jpg" alt="angular" width="100" />
-      <div>
-        <span>1.</span>
-        <span>圖像 Angular 開發入門 第二版</span>
-      </div>
-      <div>博碩文化</div>
-      <div>500</div>
-    </section>
-    <section class="card">
-      <img src="./assets/images/css.jpg" alt="css" width="100" />
-      <div>
-        <span>2.</span>
-        <span>金魚都能懂的 CSS 必學屬性</span>
-      </div>
-      <div>博碩文化</div>
-      <div>500</div>
-    </section>
-      </section>
-    </section>
-    <footer>© 2024</footer>
-    <script src="index.js"></script>
-  </body>
+<body>
+  <app-root></app-root>
+</body>
 </html>
