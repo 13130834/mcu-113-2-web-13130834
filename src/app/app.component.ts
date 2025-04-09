@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ProductCardComponent } from './product-card/product-card.component';
 
@@ -9,5 +9,11 @@ import { ProductCardComponent } from './product-card/product-card.component';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'shopping-cart';
+  productName = '書籍 A';
+  author = '作者甲、作者乙、作者丙';
+  company = '博碩文化';
+
+  isShow = true;
+
+  photoUrl = 'https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img';
 }
