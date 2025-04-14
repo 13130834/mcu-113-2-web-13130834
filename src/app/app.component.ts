@@ -1,6 +1,5 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 import { ProductCardListComponent } from './product-card-list/product-card-list.component';
-import { ProductCardComponent } from "./product-card/product-card.component";
 import { Product } from './model/product';
 
 
@@ -11,7 +10,13 @@ import { Product } from './model/product';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  products=[
+  products : Product[]=[];
+  setEmptyData():void{
+    this.products=[];
+  }
+
+  setHasData():void{
+   this.products=[
     new Product({
       id:1,
       name : '書籍 A',
@@ -62,5 +67,6 @@ export class AppComponent {
       createDate : new Date('2025/4/9'),
       price : 10000,
     }),
-  ];
+   ];
+  }
 }

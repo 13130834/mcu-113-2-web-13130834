@@ -1,6 +1,4 @@
 @for (product of products; track $index) {
-
-
   <app-product-card
   [id]="product.id"
   [productName]="product.name"
@@ -11,4 +9,7 @@
   [createDate]="product.createDate"
   [price]="product.price"
   > </app-product-card>
+}
+@empty {
+  <div class="data-empty">無產品資料</div>
 }
