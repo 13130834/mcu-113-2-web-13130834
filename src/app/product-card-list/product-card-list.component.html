@@ -8,8 +8,8 @@
   [photoUrl]="product.photoUrl"
   [createDate]="product.createDate"
   [price]="product.price"
-  > </app-product-card>
-}
-@empty {
+></app-product-card>
+} @empty {
   <div class="data-empty">無產品資料</div>
-}
+} {{ pageIndex }}
+<app-pagination [totalCount]="products.length" [(pageIndex)]="pageIndex" pageSize="2"></app-pagination>
