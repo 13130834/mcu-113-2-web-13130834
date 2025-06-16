@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { routes } from './../app.routes';
+import { Component, inject } from '@angular/core';
 import { ProductCardListComponent } from '../product-card-list/product-card-list.component';
 import { Product } from '../model/product';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-page',
@@ -9,7 +11,11 @@ import { Product } from '../model/product';
   styleUrl: './product-page.component.scss'
 })
 export class ProductPageComponent {
-  products : Product[] = [new Product({
+  private router = inject(Router);
+
+
+  products : Product[] = [
+    new Product({
     id:1,
     name : '書籍 A',
     authors : ['作者甲','作者乙','作者丙'],
@@ -61,6 +67,9 @@ export class ProductPageComponent {
    }),
   ];
 
+  onView(product:Product): void {
+    this.router.navigate(['product', product.id]);
+  }
 
 
 }
