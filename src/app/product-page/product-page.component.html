@@ -2,7 +2,7 @@
   <button type="button" (click)="onAdd()">新增</button>
 </div>
 <app-product-card-list
-  [products]="products"
+  [products]="products()"
   (view)="onView($event)"
   (edit)="onEdit($event)"
   (remove)="onRemove($event)"
@@ -10,5 +10,5 @@
 <app-pagination
   [(pageIndex)]="pageIndex"
   [pageSize]="pageSize"
-  [totalCount]="totalCount"
+  [totalCount]="totalCount()"
 ></app-pagination>
