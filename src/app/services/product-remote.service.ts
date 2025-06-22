@@ -1,8 +1,8 @@
-import { inject, Injectable } from '@angular/core';
-import { ProductService } from './product.service';
-import { map, Observable, of, count } from 'rxjs';
-import { Product } from '../model/product';
 import { HttpClient, HttpParams } from '@angular/common/http';
+import { inject, Injectable } from '@angular/core';
+import { map, Observable, } from 'rxjs';
+import { Product } from '../model/product';
+import { ProductService } from './product.service';
 
 @Injectable({
   providedIn: 'root',
@@ -12,14 +12,19 @@ export class ProductRemoteService extends ProductService {
 
   private readonly httpClient = inject(HttpClient);
 
-  override getById(productId: number): Observable<Product> {
+  override getById(productId: string): Observable<Product> {
     const url = `${this.url}/${productId}`;
     return this.httpClient.get<Product>(url);
   }
 
   override getList(name: string | undefined, index: number, size: number): Observable<{ data: Product[]; count: number; }> {
     const params = new HttpParams({ fromObject: { _page: index, _per_page: size } });
-    return this.httpClient.get<{data: Product[], items: number}>(this.url, { params }).pipe(
-      map(({ data, items: count }) => ({ data, count: data.length})));
+    return this.httpClient
+      .get<{data: Product[], items: number}>(this.url, { params })
+      .pipe(map(({ data, items: count }) => ({ data, count: data.length})));
+  }
+
+  override add(product: Readonly<Product>): Observable<Product> {
+    return this.httpClient.post<Product>(this.url, { ...product });
   }
 }
