@@ -125,6 +125,18 @@
       "isShow": true,
       "photoUrl": "https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img",
       "createDate": "2025-04-08T16:00:00.000Z"
+    },
+    {
+      "id": "9b12",
+      "name": "書籍 Z",
+      "company": "博碩文化",
+      "authors": [
+        "ABC"
+      ],
+      "price": 100,
+      "isShow": true,
+      "photoUrl": "https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img",
+      "createDate": "2025-06-22T17:53:22.892Z"
     }
   ]
 }
