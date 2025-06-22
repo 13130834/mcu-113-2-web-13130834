@@ -114,18 +114,18 @@ export class ProductService {
       mergeMap((data) => data),
       filter(({ id }) => id === productId)
     );
-      // return this._data.find(({ id }) => id === productId)!;
+
   }
 
   getList(name: string | undefined, index: number, size: number ): Observable<{data: Product[]; count: number}> {
     return of(this._data).pipe(
       mergeMap((data) => data),
-      filter(item => name ? item.name === name : true),
+      filter((item) => (name ? item.name === name : true)),
       toArray(),
-      map(data => {
-        const startIndex = (index-1) * size;
+      map((data) => {
+        const startIndex = (index - 1) * size;
         const endIndex = startIndex + size;
-        return{  data: data.slice(startIndex, endIndex), count: this._data.length }
+        return { data: data.slice(startIndex, endIndex), count: data.length };
       }),
       delay(500)
     );
