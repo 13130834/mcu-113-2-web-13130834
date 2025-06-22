@@ -10,7 +10,7 @@
       ],
       "company": "博碩文化",
       "isShow": true,
-      "photoUrl": "https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img",
+      "imgUrl": "https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img",
       "createDate": "2023-10-17T00:00:00.000+08:00",
       "price": 10000
     },
@@ -24,7 +24,7 @@
       ],
       "company": "博碩文化",
       "isShow": true,
-      "photoUrl": "https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img",
+      "imgUrl": "https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img",
       "createDate": "2023-10-17T00:00:00.000+08:00",
       "price": 1000
     },
@@ -85,20 +85,6 @@
       "price": 1000
     },
     {
-      "id": "number",
-      "name": "書籍 C",
-      "authors": [
-        "作者甲",
-        "作者乙",
-        "作者丙"
-      ],
-      "company": "博碩文化",
-      "isShow": true,
-      "photoUrl": "https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img",
-      "createDate": "2023-10-17T00:00:00.000+08:00",
-      "price": 1000
-    },
-    {
       "id": "704a",
       "name": "書籍 C",
       "authors": [
@@ -114,6 +100,34 @@
     },
     {
       "id": "3905",
+      "name": "書籍 C",
+      "authors": [
+        "作者甲",
+        "作者乙",
+        "作者丙"
+      ],
+      "company": "博碩文化",
+      "isShow": true,
+      "photoUrl": "https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img",
+      "createDate": "2023-10-17T00:00:00.000+08:00",
+      "price": 1000
+    },
+    {
+      "id": "adc6",
+      "name": "書籍 C",
+      "authors": [
+        "作者甲",
+        "作者乙",
+        "作者丙"
+      ],
+      "company": "博碩文化",
+      "isShow": true,
+      "photoUrl": "https://api.fnkr.net/testimg/200x200/DDDDDD/999999/?text=img",
+      "createDate": "2023-10-17T00:00:00.000+08:00",
+      "price": 1000
+    },
+    {
+      "id": "f759",
       "name": "書籍 C",
       "authors": [
         "作者甲",

@@ -1,8 +1,8 @@
 import { inject, Injectable } from '@angular/core';
 import { ProductService } from './product.service';
-import { map, Observable, of } from 'rxjs';
+import { map, Observable, of, count } from 'rxjs';
 import { Product } from '../model/product';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
@@ -13,6 +13,8 @@ export class ProductRemoteService extends ProductService {
   private readonly httpClient = inject(HttpClient);
 
   override getList(name: string | undefined, index: number, size: number): Observable<{ data: Product[]; count: number; }> {
-    return this.httpClient.get<Product[]>(this.url).pipe(map((data) => ({ data, count: data.length})));
+    const params = new HttpParams({ fromObject: { _page: index, _per_page: size } });
+    return this.httpClient.get<{data: Product[], items: number}>(this.url, { params }).pipe(
+      map(({ data, items: count }) => ({ data, count: data.length})));
   }
 }
